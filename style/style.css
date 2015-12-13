@@ -337,11 +337,11 @@ BIO
 #bio ul {
   display: inline;
   list-style-type: none;
-  width: 250px;
 }
 
 #bio ul li {
   display: inline-block;
   float: none;
   padding: 20px 20px;
+  width: 250px;
 }
