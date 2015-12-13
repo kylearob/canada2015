@@ -32,7 +32,7 @@ BACKGROUND
   background-image: url("../img/bg4.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
-  background-image: url("../img/bg2.jpg");
+  background-image: url("../img/bg5.jpg");
 }
 .cd-fixed-bg.cd-bg-3 {
   background-image: url("../img/bg4.jpg");
@@ -51,6 +51,11 @@ background-color: #fff;
   background-color: rgba(162,162,162,0.5);
 
   position: relative;
+  background-image: url("../img/texas.png");
+  background-size: auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .cd-scrolling-bg.cd-bio {
@@ -94,12 +99,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   font-size: 30px;
   text-align: center;
+  color: rgb(70,70,70);
 
   position: absolute;
   top: 50%; left:50%;
   transform: translate(-50%,-50%);
 }
 
+.navtext {
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(70,70,70);
+  text-transform: uppercase;
+
+}
 /**********
 ELEMENTS
 **********/
@@ -202,12 +216,9 @@ ELEMENTS
     }
 }
 
-.fa-angle-down, .fa-camera, .fa-users {
+.fa-angle-down {
   color: rgb(162,162,162);
 }
-
-
-
 
 /**********
 FIXED
@@ -245,6 +256,7 @@ NAV
 **********/
 
 #nav {
+  width: 100%;
     text-align: center;
 }
 
@@ -257,8 +269,62 @@ NAV
 #nav ul li {
   display: inline-block;
   float: none;
-  padding: 20px 20px;
+  margin-top: 10px;
+  padding: 5px 30px 0px 30px;
 }
+
+/*
+#nav li:before {
+content: " | ";
+}
+
+#nav li:first-child:before {
+content: none;
+}*/
+
+#nav li+li {
+  border-left: 3px solid rgba(70,70,70,0.75);
+}
+
+#nav a {
+    display: block;
+    line-height: 50px;
+    width: 200px;
+}
+
+#nav a:link, a:visited {
+  text-decoration: none;
+}
+
+#nav a:hover {
+  text-decoration: none;
+  color: red;
+  background-color: rgba(70,70,70,0.1);
+}
+
+#nav a:active {
+  background-color: rgba(70,70,70,0.5);
+  color: red;
+}
+
+#nav a i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+}
+
+#nav a:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
 
 /**********
 BIO
