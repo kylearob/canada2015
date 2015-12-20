@@ -8,14 +8,12 @@
 * {
   margin: 0;
 }
-/*
-html {
-  visibility: hidden;
-}
-*/
+
 body, html, main {
   	/* important */
 	height: 100%;
+  padding: 0;
+  background-color: transparent;
 
   font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
@@ -46,6 +44,7 @@ BACKGROUND
 }
 .cd-fixed-bg.cd-bg-2 {
   background-image: url("../img/bg9.jpg");
+  position: relative;
 }
 .cd-fixed-bg.cd-bg-3 {
   background-image: url("../img/bg15.jpg");
@@ -55,8 +54,7 @@ BACKGROUND
 }
 
 .cd-scrolling-bg {
-/*	min-height: 100%;*/
-/*background-color: #fff;*/
+  background-color: transparent;
 }
 
 .cd-scrolling-bg.cd-intro {
@@ -73,7 +71,22 @@ BACKGROUND
 
 .cd-scrolling-bg.cd-bio {
   height: auto;
+  background-color: rgb(200,200,200);
+
+  position: relative;
+}
+
+.cd-scrolling-bg.cd-story {
+
+  height: auto;
   background-color: rgba(162,162,162,0.5);
+
+  position: relative;
+}
+
+.cd-scrolling-bg.cd-footer {
+  height: auto;
+  background-color: rgb(70,70,70);
 
   position: relative;
 }
@@ -131,6 +144,26 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 
 }
+
+.story-text {
+  margin: 0;
+}
+
+.footer-text {
+  font-weight: 300;
+  /*font-size: 2em;*/
+  text-align: center;
+  color: rgb(162,162,162);
+
+  position: absolute;
+  top: 50%; left:50%;
+  transform: translate(-50%,-50%);
+
+  margin: 0;
+}
+
+
+
 /**********
 ELEMENTS
 **********/
@@ -193,6 +226,11 @@ FIXED
   margin: 0 20%;
   padding-top: 50px;
 }
+
+.cd-foot {
+  padding-top: 50px;
+}
+
 
 
 /***********************************************
@@ -259,6 +297,15 @@ NAV
 /**********
 BIO
 **********/
+
+#mountains {
+  background-color: rgba(200,200,200,0.0);
+  height: auto;
+
+  width: 100%;
+  position:absolute;
+  bottom:0;
+}
 
 #bio {
     text-align: center;
